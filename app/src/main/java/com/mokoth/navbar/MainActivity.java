@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.person:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.container, firstFragment).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, firstFragment).commit();
                                 return true;
 
                             case R.id.home:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.container, secondFragment).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, secondFragment).commit();
                                 return true;
 
                             case R.id.settings:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.container, thirdFragment).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, thirdFragment).commit();
                                 return true;
                         }
                         return false;
