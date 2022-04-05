@@ -57,18 +57,19 @@ public class fragment_second extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Getting reference of recyclerView
-        recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerView);
-        FitnessAdapter adapter = new FitnessAdapter(fitnessModelArrayList);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(adapter);
+
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        View inf = inflater.inflate(R.layout.fragment_second, container, false);
+        recyclerView = (RecyclerView) inf.findViewById(R.id.recyclerView);
+        FitnessAdapter adapter = new FitnessAdapter(fitnessModelArrayList);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(adapter);
+        return inf;
     }
 }
